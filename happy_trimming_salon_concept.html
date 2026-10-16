@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Trimming Salon | Sector 32D, Chandigarh (Concept Demo)</title>
+    <meta name="description" content="Modern, professional grooming and hairstyling at Happy Trimming Salon, Sector 32D, Chandigarh. Explore our services and book an enquiry concept demo.">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        forest: {
+                            800: '#1B382B',
+                            900: '#12261C',
+                            700: '#264E3D',
+                        },
+                        cream: {
+                            50: '#FAF8F5',
+                            100: '#F2ECE1',
+                            200: '#E6DCB8'
+                        },
+                        charcoal: {
+                            800: '#222222',
+                            900: '#161616',
+                            700: '#333333'
+                        },
+                        bronze: {
+                            600: '#A3704C',
+                            500: '#BA835C',
+                            700: '#8A5C3C'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #FAF8F5;
+            color: #222222;
+        }
+        .bg-forest-900 { background-color: #12261C; }
+        .bg-forest-800 { background-color: #1B382B; }
+        .text-forest-900 { color: #12261C; }
+        .text-bronze-600 { color: #A3704C; }
+        .bg-bronze-500 { background-color: #BA835C; }
+        .border-bronze-500 { border-color: #BA835C; }
+    </style>
+</head>
+<body class="bg-cream-50 text-charcoal-800 antialiased selection:bg-bronze-500 selection:text-white">
+
+    <!-- 1. Top Banner / Notice -->
+    <div class="bg-forest-900 text-cream-100 text-xs sm:text-sm py-2 px-4 text-center font-medium sticky top-0 z-50 shadow-sm flex items-center justify-center gap-2">
+        <i class="fa-solid fa-circle-info text-bronze-500"></i>
+        <span>Concept Demo — Not the Official Website. Location editable until exact listing is confirmed.</span>
+    </div>
+
+    <!-- 2. Header & Navigation -->
+    <header class="bg-cream-50/90 backdrop-blur-md border-b border-cream-200 sticky top-8 z-40 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Logo Text -->
+            <a href="#" class="flex items-center gap-2 group">
+                <div class="w-10 h-10 rounded-full bg-forest-900 text-cream-100 flex items-center justify-center font-bold text-lg group-hover:bg-forest-800 transition">
+                    H
+                </div>
+                <div>
+                    <span class="text-lg sm:text-xl font-bold tracking-tight text-forest-900 block leading-tight">Happy Trimming Salon</span>
+                    <span class="text-xs text-bronze-600 font-medium tracking-wide">Sector 32D, Chandigarh</span>
+                </div>
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-charcoal-700">
+                <a href="#home" class="hover:text-bronze-600 transition">Home</a>
+                <a href="#services" class="hover:text-bronze-600 transition">Services</a>
+                <a href="#gallery" class="hover:text-bronze-600 transition">Gallery</a>
+                <a href="#about" class="hover:text-bronze-600 transition">About</a>
+                <a href="#contact" class="hover:text-bronze-600 transition">Contact</a>
+            </nav>
+
+            <!-- CTA Header Button -->
+            <div class="hidden md:flex items-center">
+                <a href="#enquiry" class="bg-forest-900 hover:bg-forest-800 text-cream-50 px-5 py-2.5 rounded-full text-sm font-medium transition shadow-sm hover:shadow">
+                    Book Enquiry
+                </a>
+            </div>
+
+            <!-- Mobile Hamburger Button -->
+            <button id="menu-btn" aria-label="Toggle Navigation" class="md:hidden text-forest-900 focus:outline-none p-2 rounded-lg hover:bg-cream-100 transition">
+                <i class="fa-solid fa-bars text-xl"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Navigation Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-cream-50 border-b border-cream-200 px-6 pt-4 pb-6 space-y-3 shadow-lg">
+            <a href="#home" class="mobile-link block text-base font-medium text-charcoal-800 hover:text-bronze-600 py-1">Home</a>
+            <a href="#services" class="mobile-link block text-base font-medium text-charcoal-800 hover:text-bronze-600 py-1">Services</a>
+            <a href="#gallery" class="mobile-link block text-base font-medium text-charcoal-800 hover:text-bronze-600 py-1">Gallery</a>
+            <a href="#about" class="mobile-link block text-base font-medium text-charcoal-800 hover:text-bronze-600 py-1">About</a>
+            <a href="#contact" class="mobile-link block text-base font-medium text-charcoal-800 hover:text-bronze-600 py-1">Contact</a>
+            <div class="pt-2">
+                <a href="#enquiry" class="mobile-link block w-full text-center bg-forest-900 text-cream-50 py-3 rounded-xl font-medium shadow-sm">
+                    Book Enquiry
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- 3. Hero Section -->
+        <section id="home" class="relative overflow-hidden pt-12 pb-20 lg:pt-20 lg:pb-28 bg-cream-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                    <!-- Hero Content -->
+                    <div class="lg:col-span-7 space-y-6 text-left">
+                        <div class="inline-flex items-center gap-2 bg-cream-100 border border-cream-200 px-3.5 py-1.5 rounded-full text-xs font-semibold text-forest-900 uppercase tracking-wider">
+                            <i class="fa-solid fa-scissors text-bronze-600"></i> Professional Grooming Studio
+                        </div>
+                        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-forest-900 leading-[1.15]">
+                            Look Sharp. <br><span class="text-bronze-600">Feel Confident.</span>
+                        </h1>
+                        <p class="text-base sm:text-lg text-charcoal-700 max-w-xl leading-relaxed font-normal">
+                            Experience precision haircuts, expert styling, and tailored grooming in a welcoming atmosphere right here in Sector 32D, Chandigarh.
+                        </p>
+                        <!-- Hero CTA Buttons -->
+                        <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-2">
+                            <a href="#services" class="inline-flex justify-center items-center gap-2 bg-forest-900 hover:bg-forest-800 text-cream-50 px-8 py-4 rounded-xl font-medium transition shadow-md hover:shadow-lg text-base">
+                                <span>View Services</span>
+                                <i class="fa-solid fa-arrow-right text-xs"></i>
+                            </a>
+                            <a href="#enquiry" class="inline-flex justify-center items-center gap-2 bg-cream-100 hover:bg-cream-200 text-forest-900 border border-cream-200 px-8 py-4 rounded-xl font-medium transition text-base">
+                                <span>Enquire for an Appointment</span>
+                            </a>
+                        </div>
+                        <!-- Quick trust badges -->
+                        <div class="grid grid-cols-3 gap-4 pt-6 border-t border-cream-200 max-w-lg">
+                            <div>
+                                <p class="text-xl font-bold text-forest-900">Expert</p>
+                                <p class="text-xs text-charcoal-700">Stylists & Barbers</p>
+                            </div>
+                            <div>
+                                <p class="text-xl font-bold text-forest-900">Clean &</p>
+                                <p class="text-xs text-charcoal-700">Hygenic Space</p>
+                            </div>
+                            <div>
+                                <p class="text-xl font-bold text-forest-900">Sector 32D</p>
+                                <p class="text-xs text-charcoal-700">Chandigarh</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Hero Image Grid -->
+                    <div class="lg:col-span-5 relative">
+                        <div class="relative mx-auto max-w-md lg:max-w-none">
+                            <div class="absolute -inset-2 bg-gradient-to-tr from-forest-900/10 to-bronze-500/10 rounded-3xl transform -rotate-1"></div>
+                            <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=800&q=80" 
+                                 alt="Professional Hair Styling Concept" 
+                                 onerror="this.src='https://placehold.co/600x700/12261C/FAF8F5?text=Happy+Trimming+Salon';"
+                                 class="relative rounded-2xl shadow-xl w-full h-[420px] sm:h-[480px] object-cover border border-cream-200">
+                            <!-- Floating badge overlay -->
+                            <div class="absolute bottom-6 left-6 bg-cream-50/95 backdrop-blur-md px-5 py-3 rounded-2xl shadow-lg border border-cream-200 flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-full bg-forest-900 text-cream-50 flex items-center justify-center font-bold">
+                                    <i class="fa-solid fa-star text-bronze-500 text-sm"></i>
+                                </div>
+                                <div>
+                                    <p class="text-xs font-semibold text-charcoal-800">Quality Grooming</p>
+                                    <p class="text-[11px] text-charcoal-700">Tailored to your personal style</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Sample Service Categories & Menu -->
+        <section id="services" class="py-20 bg-cream-100/50 border-t border-cream-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-2xl mx-auto mb-16">
+                    <span class="text-bronze-600 font-semibold text-xs tracking-widest uppercase mb-2 block">Our Service Menu</span>
+                    <h2 class="text-3xl sm:text-4xl font-bold text-forest-900 tracking-tight">Professional Salon Services</h2>
+                    <p class="text-charcoal-700 mt-3 text-base">
+                        Explore our core offerings. Descriptions are customizable and prices remain hidden or pending owner verification until officially confirmed.
+                    </p>
+                </div>
+
+                <!-- Service Category Tabs / Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Card 1: Haircuts -->
+                    <div class="bg-cream-50 rounded-2xl p-6 shadow-sm border border-cream-200 hover:shadow-md transition flex flex-col justify-between">
+                        <div>
+                            <div class="w-12 h-12 rounded-xl bg-forest-900 text-cream-50 flex items-center justify-center mb-5 text-lg">
+                                <i class="fa-solid fa-scissors"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-forest-900 mb-2">Precision Haircuts</h3>
+                            <p class="text-sm text-charcoal-700 mb-6 leading-relaxed">
+                                Tailored haircuts designed to complement your face shape, hair texture, and daily lifestyle routine. Includes consultation and wash.
+                            </p>
+                        </div>
+                        <div class="pt-4 border-t border-cream-200 flex items-center justify-between">
+                            <span class="text-xs font-medium text-bronze-600 bg-cream-100 px-3 py-1 rounded-full">Pending Verification</span>
+                            <span class="text-xs font-semibold text-charcoal-700 italic">Price on request</span>
+                        </div>
+                    </div>
+
+                    <!-- Card 2: Styling -->
+                    <div class="bg-cream-50 rounded-2xl p-6 shadow-sm border border-cream-200 hover:shadow-md transition flex flex-col justify-between">
+                        <div>
+                            <div class="w-12 h-12 rounded-xl bg-forest-900 text-cream-50 flex items-center justify-center mb-5 text-lg">
+                                <i class="fa-solid fa-wand-magic-sparkles"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-forest-900 mb-2">Hair Styling & Blow Dry</h3>
+                            <p class="text-sm text-charcoal-700 mb-6 leading-relaxed">
+                                Professional styling for special occasions, interviews, or casual refreshes using premium products that keep your hair healthy.
+                            </p>
+                        </div>
+                        <div class="pt-4 border-t border-cream-200 flex items-center justify-between">
+                            <span class="text-xs font-medium text-bronze-600 bg-cream-100 px-3 py-1 rounded-full">Pending Verification</span>
+                            <span class="text-xs font-semibold text-charcoal-700 italic">Price on request</span>
+                        </div>
+                    </div>
+
+                    <!-- Card 3: Beard Grooming -->
+                    <div class="bg-cream-50 rounded-2xl p-6 shadow-sm border border-cream-200 hover:shadow-md transition flex flex-col justify-between">
+                        <div>
+                            <div class="w-12 h-12 rounded-xl bg-forest-900 text-cream-50 flex items-center justify-center mb-5 text-lg">
+                                <i class="fa-solid fa-user-tie"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-forest-900 mb-2">Beard Grooming & Shaves</h3>
+                            <p class="text-sm text-charcoal-700 mb-6 leading-relaxed">
+                                Expert beard trims, line-ups, hot towel shaves, and conditioning treatments to keep facial hair neat and skin irritation-free.
+                            </p>
+                        </div>
+                        <div class="pt-4 border-t border-cream-200 flex items-center justify-between">
+                            <span class="text-xs font-medium text-bronze-600 bg-cream-100 px-3 py-1 rounded-full">Pending Verification</span>
+                            <span class="text-xs font-semibold text-charcoal-700 italic">Price on request</span>
+                        </div>
+                    </div>
+
+                    <!-- Card 4: Hair Wash -->
+                    <div class="bg-cream-50 rounded-2xl p-6 shadow-sm border border-cream-200 hover:shadow-md transition flex flex-col justify-between">
+                        <div>
+                            <div class="w-12 h-12 rounded-xl bg-forest-900 text-cream-50 flex items-center justify-center mb-5 text-lg">
+                                <i class="fa-solid fa-shower"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-forest-900 mb-2">Hair Wash & Scalp Care</h3>
+                            <p class="text-sm text-charcoal-700 mb-6 leading-relaxed">
+                                Refreshing shampoos and invigorating scalp massages designed to clear buildup, stimulate circulation, and relax your senses.
+                            </p>
+                        </div>
+                        <div class="pt-4 border-t border-cream-200 flex items-center justify-between">
+                            <span class="text-xs font-medium text-bronze-600 bg-cream-100 px-3 py-1 rounded-full">Pending Verification</span>
+                            <span class="text-xs font-semibold text-charcoal-700 italic">Price on request</span>
+                        </div>
+                    </div>
+
+                    <!-- Card 5: Treatments -->
+                    <div class="bg-cream-50 rounded-2xl p-6 shadow-sm border border-cream-200 hover:shadow-md transition flex flex-col justify-between">
+                        <div>
+                            <div class="w-12 h-12 rounded-xl bg-forest-900 text-cream-50 flex items-center justify-center mb-5 text-lg">
+                                <i class="fa-solid fa-spa"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-forest-900 mb-2">Hair Treatments & Spas</h3>
+                            <p class="text-sm text-charcoal-700 mb-6 leading-relaxed">
+                                Deep conditioning, nourishing hair masks, and restorative treatments tailored to revitalize dry, damaged, or chemically treated hair.
+                            </p>
+                        </div>
+                        <div class="pt-4 border-t border-cream-200 flex items-center justify-between">
+                            <span class="text-xs font-medium text-bronze-600 bg-cream-100 px-3 py-1 rounded-full">Pending Verification</span>
+                            <span class="text-xs font-semibold text-charcoal-700 italic">Price on request</span>
+                        </div>
+                    </div>
+
+                    <!-- Card 6: Custom Styling / Consultation -->
+                    <div class="bg-cream-50 rounded-2xl p-6 shadow-sm border border-cream-200 hover:shadow-md transition flex flex-col justify-between">
+                        <div>
+                            <div class="w-12 h-12 rounded-xl bg-forest-900 text-cream-50 flex items-center justify-center mb-5 text-lg">
+                                <i class="fa-solid fa-comments"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-forest-900 mb-2">Style Consultation</h3>
+                            <p class="text-sm text-charcoal-700 mb-6 leading-relaxed">
+                                Not sure what look suits you best? Sit down with our experienced stylists for professional advice and personalized recommendations.
+                            </p>
+                        </div>
+                        <div class="pt-4 border-t border-cream-200 flex items-center justify-between">
+                            <span class="text-xs font-medium text-bronze-600 bg-cream-100 px-3 py-1 rounded-full">Complimentary</span>
+                            <span class="text-xs font-semibold text-forest-900">Free with service</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Hairstyle Inspiration Gallery -->
+        <section id="gallery" class="py-20 bg-cream-50 border-t border-cream-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-2xl mx-auto mb-16">
+                    <span class="text-bronze-600 font-semibold text-xs tracking-widest uppercase mb-2 block">Visual Showcase</span>
+                    <h2 class="text-3xl sm:text-4xl font-bold text-forest-900 tracking-tight">Hairstyle Inspiration Gallery</h2>
+                    <p class="text-charcoal-700 mt-3 text-base">
+                        A glimpse of clean lines, modern cuts, and professional grooming aesthetics. Bring your favorite look to your next visit.
+                    </p>
+                </div>
+
+                <!-- Gallery Grid -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Gallery Item 1 -->
+                    <div class="group relative overflow-hidden rounded-2xl shadow-sm border border-cream-200 aspect-[4/5] bg-cream-100">
+                        <img src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?auto=format&fit=crop&w=700&q=80" 
+                             alt="Modern Fade Haircut" 
+                             onerror="this.src='https://placehold.co/600x750/12261C/FAF8F5?text=Fade+Haircut';"
+                             class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-forest-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col justify-end p-6">
+                            <span class="text-bronze-500 text-xs font-semibold tracking-wider uppercase">Grooming</span>
+                            <h4 class="text-cream-50 text-lg font-bold">Classic Fade & Crop</h4>
+                        </div>
+                    </div>
+
+                    <!-- Gallery Item 2 -->
+                    <div class="group relative overflow-hidden rounded-2xl shadow-sm border border-cream-200 aspect-[4/5] bg-cream-100">
+                        <img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&fit=crop&w=700&q=80" 
+                             alt="Beard Trim and Styling" 
+                             onerror="this.src='https://placehold.co/600x750/12261C/FAF8F5?text=Beard+Grooming';"
+                             class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-forest-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col justify-end p-6">
+                            <span class="text-bronze-500 text-xs font-semibold tracking-wider uppercase">Beard Care</span>
+                            <h4 class="text-cream-50 text-lg font-bold">Precision Beard Shaping</h4>
+                        </div>
+                    </div>
+
+                    <!-- Gallery Item 3 -->
+                    <div class="group relative overflow-hidden rounded-2xl shadow-sm border border-cream-200 aspect-[4/5] bg-cream-100">
+                        <img src="https://images.unsplash.com/photo-1517832606293-7ae2a30c545f?auto=format&fit=crop&w=700&q=80" 
+                             alt="Professional Salon Atmosphere" 
+                             onerror="this.src='https://placehold.co/600x750/12261C/FAF8F5?text=Salon+Atmosphere';"
+                             class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-forest-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col justify-end p-6">
+                            <span class="text-bronze-500 text-xs font-semibold tracking-wider uppercase">Experience</span>
+                            <h4 class="text-cream-50 text-lg font-bold">Relaxing & Clean Interior</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. About Section -->
+        <section id="about" class="py-20 bg-cream-100/50 border-t border-cream-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                    <div class="lg:col-span-6 space-y-6">
+                        <span class="text-bronze-600 font-semibold text-xs tracking-widest uppercase block">About Happy Trimming</span>
+                        <h2 class="text-3xl sm:text-4xl font-bold text-forest-900 tracking-tight leading-tight">
+                            Committed to Quality Grooming & Warm Hospitality
+                        </h2>
+                        <p class="text-charcoal-700 text-base leading-relaxed">
+                            Located conveniently in Sector 32D, Chandigarh, Happy Trimming Salon is designed to be your neighborhood destination for reliable, professional haircuts and grooming services. We believe that looking sharp should be a comfortable, straightforward experience.
+                        </p>
+                        <p class="text-charcoal-700 text-base leading-relaxed">
+                            Our focus is entirely on your comfort, hygiene, and satisfaction. Whether you need a quick trim before a workday or a complete style refresh, our team provides personalized attention with clean equipment and professional care.
+                        </p>
+                        <div class="grid grid-cols-2 gap-4 pt-4">
+                            <div class="bg-cream-50 p-4 rounded-xl border border-cream-200">
+                                <p class="font-bold text-forest-900 text-lg">Professional Care</p>
+                                <p class="text-xs text-charcoal-700 mt-1">Attentive stylists focused on your preferences.</p>
+                            </div>
+                            <div class="bg-cream-50 p-4 rounded-xl border border-cream-200">
+                                <p class="font-bold text-forest-900 text-lg">Hygienic Setup</p>
+                                <p class="text-xs text-charcoal-700 mt-1">Sanitized stations and clean instruments.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lg:col-span-6">
+                        <div class="relative">
+                            <img src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?auto=format&fit=crop&w=800&q=80" 
+                                 alt="Salon Interior Setup" 
+                                 onerror="this.src='https://placehold.co/600x600/12261C/FAF8F5?text=Happy+Trimming+Interior';"
+                                 class="rounded-3xl shadow-lg w-full h-[400px] object-cover border border-cream-200">
+                            <div class="absolute -bottom-6 -right-6 bg-forest-900 text-cream-50 p-6 rounded-2xl shadow-xl hidden sm:block max-w-xs border border-forest-800">
+                                <p class="text-sm font-semibold text-bronze-500 mb-1">Visit Us Today</p>
+                                <p class="text-xs text-cream-100 leading-relaxed">Sector 32D, Chandigarh. Walk-ins welcome or book an enquiry online.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. Appointment Enquiry Journey & 8. WhatsApp Quick Contact -->
+        <section id="enquiry" class="py-20 bg-cream-50 border-t border-cream-200">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-2xl mx-auto mb-12">
+                    <span class="text-bronze-600 font-semibold text-xs tracking-widest uppercase mb-2 block">Quick Connection</span>
+                    <h2 class="text-3xl sm:text-4xl font-bold text-forest-900 tracking-tight">Appointment Enquiry</h2>
+                    <p class="text-charcoal-700 mt-3 text-base">
+                        Fill out the form below to submit an enquiry or connect instantly with our team via WhatsApp.
+                    </p>
+                </div>
+
+                <!-- Quick WhatsApp Banner Button -->
+                <div class="bg-forest-900 text-cream-50 rounded-2xl p-6 sm:p-8 mb-10 shadow-md flex flex-col sm:flex-row items-center justify-between gap-6 border border-forest-700">
+                    <div class="flex items-center gap-4 text-center sm:text-left">
+                        <div class="w-14 h-14 rounded-full bg-emerald-600 text-white flex items-center justify-center text-2xl shadow-inner shrink-0 mx-auto sm:mx-0">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold">Prefer instant messaging?</h3>
+                            <p class="text-xs sm:text-sm text-cream-100 mt-1">Chat directly with Happy Trimming Salon on WhatsApp (Placeholder number editable).</p>
+                        </div>
+                    </div>
+                    <a href="https://wa.me/919876543210?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20appointment%20availability%20at%20Happy%20Trimming%20Salon." 
+                       target="_blank" 
+                       rel="noopener noreferrer"
+                       class="bg-emerald-600 hover:bg-emerald-500 text-white px-6 py-3.5 rounded-xl font-medium text-sm transition shadow-md flex items-center gap-2 whitespace-nowrap">
+                        <i class="fa-brands fa-whatsapp text-lg"></i>
+                        <span>Chat on WhatsApp</span>
+                    </a>
+                </div>
+
+                <!-- Enquiry Form Card -->
+                <div class="bg-cream-100/60 rounded-3xl p-8 sm:p-10 border border-cream-200 shadow-sm">
+                    <form id="enquiry-form" class="space-y-6" novalidate>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <!-- Name Field -->
+                            <div>
+                                <label for="name" class="block text-xs font-semibold text-forest-900 uppercase tracking-wider mb-2">Your Full Name *</label>
+                                <input type="text" id="name" name="name" required 
+                                       class="w-full bg-cream-50 border border-cream-200 rounded-xl px-4 py-3.5 text-sm text-charcoal-800 focus:outline-none focus:border-bronze-500 transition"
+                                       placeholder="e.g. Rahul Sharma">
+                                <p id="name-error" class="text-red-600 text-xs mt-1 hidden">Please enter your name.</p>
+                            </div>
+                            <!-- Phone Field -->
+                            <div>
+                                <label for="phone" class="block text-xs font-semibold text-forest-900 uppercase tracking-wider mb-2">Telephone Number *</label>
+                                <input type="tel" id="phone" name="phone" required 
+                                       class="w-full bg-cream-50 border border-cream-200 rounded-xl px-4 py-3.5 text-sm text-charcoal-800 focus:outline-none focus:border-bronze-500 transition"
+                                       placeholder="e.g. +91 98765 43210">
+                                <p id="phone-error" class="text-red-600 text-xs mt-1 hidden">Please enter a valid phone number.</p>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <!-- Service Select -->
+                            <div>
+                                <label for="service" class="block text-xs font-semibold text-forest-900 uppercase tracking-wider mb-2">Select Service *</label>
+                                <select id="service" name="service" required
+                                        class="w-full bg-cream-50 border border-cream-200 rounded-xl px-4 py-3.5 text-sm text-charcoal-800 focus:outline-none focus:border-bronze-500 transition">
+                                    <option value="" disabled selected>Select a service category</option>
+                                    <option value="Precision Haircut">Precision Haircut</option>
+                                    <option value="Hair Styling & Blow Dry">Hair Styling & Blow Dry</option>
+                                    <option value="Beard Grooming & Shave">Beard Grooming & Shave</option>
+                                    <option value="Hair Wash & Scalp Care">Hair Wash & Scalp Care</option>
+                                    <option value="Hair Treatments & Spa">Hair Treatments & Spa</option>
+                                    <option value="Style Consultation">Style Consultation</option>
+                                </select>
+                                <p id="service-error" class="text-red-600 text-xs mt-1 hidden">Please select a service.</p>
+                            </div>
+                            <!-- Date Field -->
+                            <div>
+                                <label for="date" class="block text-xs font-semibold text-forest-900 uppercase tracking-wider mb-2">Preferred Date *</label>
+                                <input type="date" id="date" name="date" required
+                                       class="w-full bg-cream-50 border border-cream-200 rounded-xl px-4 py-3.5 text-sm text-charcoal-800 focus:outline-none focus:border-bronze-500 transition">
+                                <p id="date-error" class="text-red-600 text-xs mt-1 hidden">Please choose a preferred date.</p>
+                            </div>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <div class="pt-2">
+                            <button type="submit" class="w-full bg-forest-900 hover:bg-forest-800 text-cream-50 py-4 rounded-xl font-medium text-base transition shadow-md hover:shadow-lg flex items-center justify-center gap-2">
+                                <i class="fa-solid fa-paper-plane text-xs"></i>
+                                <span>Submit Appointment Enquiry</span>
+                            </button>
+                        </div>
+                    </form>
+
+                    <!-- Success State Box -->
+                    <div id="success-box" class="hidden mt-6 bg-emerald-50 border border-emerald-200 rounded-2xl p-6 text-center">
+                        <div class="w-12 h-12 bg-emerald-600 text-white rounded-full flex items-center justify-center mx-auto mb-3 text-lg">
+                            <i class="fa-solid fa-check"></i>
+                        </div>
+                        <h4 class="text-lg font-bold text-emerald-900">Enquiry Submitted Successfully!</h4>
+                        <p class="text-xs sm:text-sm text-emerald-700 mt-1">Thank you! This is a concept demo. In a live setup, our team at Happy Trimming Salon will call or message you shortly to confirm your appointment time.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 9. Contact Details, Opening Hours & Map Placeholder -->
+        <section id="contact" class="py-20 bg-cream-100/50 border-t border-cream-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-2xl mx-auto mb-16">
+                    <span class="text-bronze-600 font-semibold text-xs tracking-widest uppercase mb-2 block">Reach Us</span>
+                    <h2 class="text-3xl sm:text-4xl font-bold text-forest-900 tracking-tight">Visit Happy Trimming Salon</h2>
+                    <p class="text-charcoal-700 mt-3 text-base">
+                        Conveniently situated in Sector 32D, Chandigarh. Drop by or get in touch with our team.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                    <!-- Contact Info Card -->
+                    <div class="bg-cream-50 rounded-2xl p-8 border border-cream-200 shadow-sm space-y-6">
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-forest-900 text-cream-50 flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-forest-900 text-sm uppercase tracking-wider">Location</h4>
+                                <p class="text-sm text-charcoal-700 mt-1 leading-relaxed">
+                                    Sector 32D, Chandigarh<br>
+                                    <span class="text-xs text-bronze-600 font-medium">(Location editable until exact listing is confirmed)</span>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-forest-900 text-cream-50 flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-forest-900 text-sm uppercase tracking-wider">Telephone</h4>
+                                <p class="text-sm text-charcoal-700 mt-1">
+                                    +91 98765 43210 <span class="text-xs text-bronze-600 font-medium">(Placeholder)</span>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-forest-900 text-cream-50 flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-forest-900 text-sm uppercase tracking-wider">Email</h4>
+                                <p class="text-sm text-charcoal-700 mt-1">
+                                    contact@happytrimmingsalon.com <span class="text-xs text-bronze-600 font-medium">(Placeholder)</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Opening Hours Card -->
+                    <div class="bg-cream-50 rounded-2xl p-8 border border-cream-200 shadow-sm space-y-4">
+                        <div class="flex items-center gap-3 mb-2">
+                            <div class="w-10 h-10 rounded-xl bg-forest-900 text-cream-50 flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-clock"></i>
+                            </div>
+                            <h4 class="font-bold text-forest-900 text-lg">Opening Hours</h4>
+                        </div>
+                        <ul class="space-y-3 text-sm text-charcoal-700 divide-y divide-cream-200">
+                            <li class="flex justify-between pt-2">
+                                <span class="font-medium text-forest-900">Monday — Saturday</span>
+                                <span>9:00 AM — 8:00 PM</span>
+                            </li>
+                            <li class="flex justify-between pt-3">
+                                <span class="font-medium text-forest-900">Sunday</span>
+                                <span>10:00 AM — 6:00 PM</span>
+                            </li>
+                        </ul>
+                        <div class="pt-4 bg-cream-100/50 p-4 rounded-xl text-xs text-charcoal-700 mt-4 border border-cream-200">
+                            <i class="fa-solid fa-circle-info text-bronze-600 mr-1"></i> Timings are indicative placeholder hours and subject to final confirmation.
+                        </div>
+                    </div>
+
+                    <!-- Map Placeholder Card -->
+                    <div class="bg-cream-50 rounded-2xl p-4 border border-cream-200 shadow-sm flex flex-col justify-between overflow-hidden relative min-h-[250px]">
+                        <div class="absolute inset-0 bg-forest-900/10 flex flex-col items-center justify-center text-center p-6 backdrop-blur-[2px]">
+                            <div class="w-12 h-12 rounded-full bg-forest-900 text-cream-50 flex items-center justify-center mb-3 shadow-md">
+                                <i class="fa-solid fa-map-location-dot text-bronze-500"></i>
+                            </div>
+                            <h4 class="font-bold text-forest-900 text-base">Sector 32D, Chandigarh</h4>
+                            <p class="text-xs text-charcoal-700 mt-1 max-w-xs">Interactive map placeholder. Exact pin coordinate will be integrated upon official business verification.</p>
+                        </div>
+                        <div class="mt-auto z-10 text-right">
+                            <span class="inline-block bg-cream-50/90 text-[11px] font-medium text-forest-900 px-3 py-1 rounded-full shadow-sm border border-cream-200">
+                                Chandigarh, India
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 10. Mobile-Friendly FAQ Section -->
+        <section class="py-20 bg-cream-50 border-t border-cream-200">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-2xl mx-auto mb-16">
+                    <span class="text-bronze-600 font-semibold text-xs tracking-widest uppercase mb-2 block">Common Questions</span>
+                    <h2 class="text-3xl sm:text-4xl font-bold text-forest-900 tracking-tight">Frequently Asked Questions</h2>
+                    <p class="text-charcoal-700 mt-3 text-base">
+                        Everything you need to know about visiting Happy Trimming Salon.
+                    </p>
+                </div>
+
+                <div class="space-y-4">
+                    <!-- FAQ 1 -->
+                    <div class="bg-cream-100/60 rounded-2xl border border-cream-200 overflow-hidden transition">
+                        <button class="faq-toggle w-full text-left p-6 font-semibold text-forest-900 flex justify-between items-center focus:outline-none">
+                            <span>Do I need to book an appointment or are walk-ins welcome?</span>
+                            <i class="fa-solid fa-chevron-down text-xs text-bronze-600 transition-transform duration-300"></i>
+                        </button>
+                        <div class="faq-content hidden px-6 pb-6 text-sm text-charcoal-700 leading-relaxed border-t border-cream-200/50 pt-4">
+                            Walk-ins are always welcome at Happy Trimming Salon. However, booking an enquiry in advance helps ensure your preferred time slot is reserved without waiting.
+                        </div>
+                    </div>
+
+                    <!-- FAQ 2 -->
+                    <div class="bg-cream-100/60 rounded-2xl border border-cream-200 overflow-hidden transition">
+                        <button class="faq-toggle w-full text-left p-6 font-semibold text-forest-900 flex justify-between items-center focus:outline-none">
+                            <span>Where is the salon located?</span>
+                            <i class="fa-solid fa-chevron-down text-xs text-bronze-600 transition-transform duration-300"></i>
+                        </button>
+                        <div class="faq-content hidden px-6 pb-6 text-sm text-charcoal-700 leading-relaxed border-t border-cream-200/50 pt-4">
+                            We are located in Sector 32D, Chandigarh. The exact store listing and coordinates are currently in concept phase and will be updated upon confirmation.
+                        </div>
+                    </div>
+
+                    <!-- FAQ 3 -->
+                    <div class="bg-cream-100/60 rounded-2xl border border-cream-200 overflow-hidden transition">
+                        <button class="faq-toggle w-full text-left p-6 font-semibold text-forest-900 flex justify-between items-center focus:outline-none">
+                            <span>What grooming services do you offer?</span>
+                            <i class="fa-solid fa-chevron-down text-xs text-bronze-600 transition-transform duration-300"></i>
+                        </button>
+                        <div class="faq-content hidden px-6 pb-6 text-sm text-charcoal-700 leading-relaxed border-t border-cream-200/50 pt-4">
+                            We offer precision haircuts, professional styling, beard trimming and shaves, hair washes, scalp care, and nourishing hair treatments.
+                        </div>
+                    </div>
+
+                    <!-- FAQ 4 -->
+                    <div class="bg-cream-100/60 rounded-2xl border border-cream-200 overflow-hidden transition">
+                        <button class="faq-toggle w-full text-left p-6 font-semibold text-forest-900 flex justify-between items-center focus:outline-none">
+                            <span>How can I contact the salon directly?</span>
+                            <i class="fa-solid fa-chevron-down text-xs text-bronze-600 transition-transform duration-300"></i>
+                        </button>
+                        <div class="faq-content hidden px-6 pb-6 text-sm text-charcoal-700 leading-relaxed border-t border-cream-200/50 pt-4">
+                            You can reach us instantly via the WhatsApp quick contact button or by submitting an appointment enquiry form on this page.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer with Social Media Links -->
+    <footer class="bg-forest-900 text-cream-100 pt-16 pb-12 border-t border-forest-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+                <!-- Col 1: Brand -->
+                <div class="space-y-4">
+                    <div class="flex items-center gap-2">
+                        <div class="w-8 h-8 rounded-full bg-cream-50 text-forest-900 flex items-center justify-center font-bold text-sm">
+                            H
+                        </div>
+                        <span class="text-lg font-bold tracking-tight text-cream-50">Happy Trimming Salon</span>
+                    </div>
+                    <p class="text-xs text-cream-100/80 leading-relaxed">
+                        Modern, professional grooming and hairstyling in Sector 32D, Chandigarh. Concept demo showcasing quality salon services.
+                    </p>
+                </div>
+
+                <!-- Col 2: Quick Links -->
+                <div>
+                    <h4 class="text-sm font-semibold uppercase tracking-wider text-bronze-500 mb-4">Quick Links</h4>
+                    <ul class="space-y-2.5 text-xs text-cream-100/80">
+                        <li><a href="#home" class="hover:text-cream-50 transition">Home</a></li>
+                        <li><a href="#services" class="hover:text-cream-50 transition">Services Menu</a></li>
+                        <li><a href="#gallery" class="hover:text-cream-50 transition">Inspiration Gallery</a></li>
+                        <li><a href="#about" class="hover:text-cream-50 transition">About Us</a></li>
+                        <li><a href="#contact" class="hover:text-cream-50 transition">Contact Details</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: Location -->
+                <div>
+                    <h4 class="text-sm font-semibold uppercase tracking-wider text-bronze-500 mb-4">Location</h4>
+                    <p class="text-xs text-cream-100/80 leading-relaxed">
+                        Sector 32D, Chandigarh<br>
+                        India<br><br>
+                        <span class="text-bronze-500 font-medium">Concept Demo — Location editable until exact listing is confirmed.</span>
+                    </p>
+                </div>
+
+                <!-- Col 4: Social Media -->
+                <div>
+                    <h4 class="text-sm font-semibold uppercase tracking-wider text-bronze-500 mb-4">Connect With Us</h4>
+                    <p class="text-xs text-cream-100/80 mb-4">Follow our concept updates and professional styling tips.</p>
+                    <div class="flex items-center space-x-3">
+                        <a href="#" aria-label="Instagram" class="w-10 h-10 rounded-xl bg-forest-800 hover:bg-bronze-600 text-cream-50 flex items-center justify-center transition">
+                            <i class="fa-brands fa-instagram text-sm"></i>
+                        </a>
+                        <a href="#" aria-label="Facebook" class="w-10 h-10 rounded-xl bg-forest-800 hover:bg-bronze-600 text-cream-50 flex items-center justify-center transition">
+                            <i class="fa-brands fa-facebook-f text-sm"></i>
+                        </a>
+                        <a href="https://wa.me/919876543210" aria-label="WhatsApp" class="w-10 h-10 rounded-xl bg-forest-800 hover:bg-emerald-600 text-cream-50 flex items-center justify-center transition">
+                            <i class="fa-brands fa-whatsapp text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Copyright -->
+            <div class="pt-8 border-t border-forest-800 text-center text-xs text-cream-100/60 flex flex-col sm:flex-row items-center justify-between gap-4">
+                <p>&copy; 2026 Happy Trimming Salon (Concept Demo). All rights reserved.</p>
+                <p class="text-bronze-500 font-medium">Not the Official Website — Designed for Owner Presentation</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Interactivity -->
+    <script>
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // FAQ Accordion Toggle
+        const faqToggles = document.querySelectorAll('.faq-toggle');
+        faqToggles.forEach(toggle => {
+            toggle.addEventListener('click', () => {
+                const content = toggle.nextElementSibling;
+                const icon = toggle.querySelector('i');
+                
+                // Toggle current
+                content.classList.toggle('hidden');
+                icon.classList.toggle('rotate-180');
+            });
+        });
+
+        // Form Validation & Success State
+        const enquiryForm = document.getElementById('enquiry-form');
+        const successBox = document.getElementById('success-box');
+
+        enquiryForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            let isValid = true;
+            
+            // Name check
+            const nameInput = document.getElementById('name');
+            const nameError = document.getElementById('name-error');
+            if (!nameInput.value.trim()) {
+                nameError.classList.remove('hidden');
+                nameInput.classList.add('border-red-500');
+                isValid = false;
+            } else {
+                nameError.classList.add('hidden');
+                nameInput.classList.remove('border-red-500');
+            }
+
+            // Phone check
+            const phoneInput = document.getElementById('phone');
+            const phoneError = document.getElementById('phone-error');
+            if (!phoneInput.value.trim() || phoneInput.value.length < 8) {
+                phoneError.classList.remove('hidden');
+                phoneInput.classList.add('border-red-500');
+                isValid = false;
+            } else {
+                phoneError.classList.add('hidden');
+                phoneInput.classList.remove('border-red-500');
+            }
+
+            // Service check
+            const serviceSelect = document.getElementById('service');
+            const serviceError = document.getElementById('service-error');
+            if (!serviceSelect.value) {
+                serviceError.classList.remove('hidden');
+                serviceSelect.classList.add('border-red-500');
+                isValid = false;
+            } else {
+                serviceError.classList.add('hidden');
+                serviceSelect.classList.remove('border-red-500');
+            }
+
+            // Date check
+            const dateInput = document.getElementById('date');
+            const dateError = document.getElementById('date-error');
+            if (!dateInput.value) {
+                dateError.classList.remove('hidden');
+                dateInput.classList.add('border-red-500');
+                isValid = false;
+            } else {
+                dateError.classList.add('hidden');
+                dateInput.classList.remove('border-red-500');
+            }
+
+            if (isValid) {
+                enquiryForm.classList.add('hidden');
+                successBox.classList.remove('hidden');
+            }
+        });
+    </script>
+</body>
+</html>
